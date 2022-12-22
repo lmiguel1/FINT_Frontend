@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+/*Footer*/
+.footer{
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+}
+.row{
+    width: 100%;
+    border-top: 1px solid gray;
+    padding-top: 30px;
+    text-align: center;
+    align-items: center;
+}
+.copyright{
+    padding-left: 5%;
+}

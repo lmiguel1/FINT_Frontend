@@ -1,0 +1,13 @@
+.course-info{
+    display: flex;
+    width: 90%;
+    margin: 2% auto;
+}
+.course-info__img{
+    width: 145px;
+    height: 145px;
+}
+.course-info__text{
+    width: 80%;
+    margin: auto;
+}
