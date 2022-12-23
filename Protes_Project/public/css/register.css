@@ -2,6 +2,10 @@ h1{text-align: center;
 }
 .img-container{text-align: center
 }
+.main-img{
+  width: 50%;
+
+}
 p{text-align: center;}
 .main-inputs-container {
     margin: auto;
@@ -32,3 +36,4 @@ form {
   padding: 1em;
   box-sizing: border-box;
 }
+.main-inputs-container input {width: 100%;}
