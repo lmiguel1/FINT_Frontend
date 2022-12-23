@@ -1,3 +1,4 @@
+/*  Course-Info     */
 .course-info{
     display: flex;
     width: 90%;
@@ -10,4 +11,46 @@
 .course-info__text{
     width: 80%;
     margin: auto;
+}
+/*  Modules     */
+.modules{
+    width: 90%;
+    margin: 5% auto;
+}
+.modules__module{
+    width: 90%;
+    margin: 3% auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    font-size: 2em;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.module__1, .module__2, .module__3{
+    position: relative;
+}
+.module__1::after, .module__2::after, .module__3::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: lightgreen;
+    z-index: -1;
+}
+.module__3::after{
+    width: 60%;
+}
+.modules__module__name{
+    flex-grow: 2;
+}
+.modules__module__progress{
+    flex-grow: 1;
+    text-align: center;
+}
+.modules__module__arrow a{
+    color: black;
 }
