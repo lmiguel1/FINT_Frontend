@@ -11,15 +11,20 @@ header {
 
 header,h1 {
   color: rgb(2, 10, 131);
+  font-size: 25px;
 }
 
 header,p {
-  margin: 2px;
+  margin: 10px;
 }
 
 .left-header {
-  background-color: #c8ff2f;
+  background-color: #eafd3f;
   display: flex;
+  font-size: 20px;
+  align-items: center;
+  padding: 15px;
+  height: 20px;
 
   
 }
