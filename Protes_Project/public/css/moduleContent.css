@@ -18,6 +18,8 @@ header,p {
   margin: 10px;
 }
 
+
+
 .left-header {
   background-color: #eafd3f;
   display: flex;
@@ -36,7 +38,10 @@ header,p {
 .header_2 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+
+
 
 footer {
     display: flex;
@@ -63,7 +68,7 @@ body{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 30px 40px;
+    padding: 0px 0px;
     overflow: hidden;
   }
   
@@ -97,7 +102,7 @@ body{
     border-bottom-color: #fff; 
   }
   
-  #pnl_1, #pnl_2, #pnl_3{
+  #pnl_1, #pnl_2, #pnl_3, #pnl_4, #pnl_5 {
     position: absolute;
     top: 31px;
     left: 0;
@@ -106,18 +111,18 @@ body{
     overflow: hidden;
   }
   
-    #pnl_1 > div, #pnl_2 > div, #pnl_3 > div{
+    #pnl_1 > div, #pnl_2 > div, #pnl_3 > div, #pnl_4 > div, #pnl_5 > div{
       opacity: 0;
       transition: all 0.1s ease;
       padding: 30px;
     }
   
-  #uno:target ~ #pnl_1, #dos:target ~ #pnl_2, #tres:target ~ #pnl_3{
+  #uno:target ~ #pnl_1, #dos:target ~ #pnl_2, #tres:target ~ #pnl_3, #cuatro:target ~ #pnl_4, #cinco:target ~ #pnl_5 { 
     position: static;
     border: 1px solid #ddd;
   }
   
-    #uno:target ~ #pnl_1 > div, #dos:target ~ #pnl_2 > div, #tres:target ~ #pnl_3 > div{
+  #uno:target ~ #pnl_1 > div, #dos:target ~ #pnl_2 > div, #tres:target ~ #pnl_3 > div, #cuatro:target ~ #pnl_4 > div, #cinco:target ~ #pnl_5 > div{
       opacity: 1;
       transition: all 1s ease;
     }
@@ -125,15 +130,15 @@ body{
     .progress {
         height: 35px;
         width: 50%;
-        border: 1px solid #428bca;
+        border: 1px solid #2b2b2c;
         border-radius: 5px;
-        background-color: #e6f3fa;
+        background-color: rgb(214, 212, 212);
         margin-bottom: 15px;
     }
      
     .progress-bar {
         height: 100%;
-        background: #428bca;
+        background: rgba(80, 80, 82, 0.212);
         display: flex;
         align-items: center;
         transition: width 0.25s;
@@ -143,7 +148,7 @@ body{
     .progress-bar-text {
         margin-left: 10px;
         font-weight: bold;
-        color: #cce7f5;
+        color: #0d0e0f;
     }
 
     @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
@@ -161,7 +166,7 @@ a:link,a:active,a:visited,a:hover{
 {
 	width: 100%;
     min-height: 5vh;
-    background: #EDF2F8;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
