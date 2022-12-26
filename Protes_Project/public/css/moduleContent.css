@@ -177,8 +177,7 @@ a:link,a:active,a:visited,a:hover{
 	margin: 1rem;
 	display: grid;
 	grid-gap: 1.5rem;
-	grid-template-rows: repeat(1,22rem);
-	grid-template-columns: repeat(4,17rem);
+	
 }
 .eachdiv
 {
@@ -328,3 +327,4 @@ a:link,a:active,a:visited,a:hover{
   display: flex;
   justify-content: space-between;
 }
+
