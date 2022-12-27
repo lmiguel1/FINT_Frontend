@@ -3,7 +3,7 @@ header {
   justify-content: space-between;
   background: white;
   align-items: center;
-  height: 40px;
+  height: 54px;
  
   
 
@@ -52,7 +52,7 @@ header,h1 {
 }
 
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: #FFE946;
     margin: 0;
   }
   
@@ -63,12 +63,12 @@ body{
 
   
   #main{
-    background-color: #fff;
+    background-color: #FFE946;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     padding: 0px 0px;
-    overflow: hidden;
+    
   }
   
   
@@ -84,11 +84,11 @@ body{
   .diana + a {
     display: block;
     float: left;
-    height: 32px;
-    line-height: 32px;
+    height: 30px;
+    line-height: 30px;
     padding: 0 10px;
-    border: 1px solid #ddd;
-    background-color: #eee;
+    border: 1px solid rgb(10, 10, 10);
+    background-color: #FFE946;
     margin-bottom: -1px;
     border-radius: 8px 8px 0 0;
     margin-right: 10px;
@@ -96,8 +96,8 @@ body{
   }
   
   .diana:target + a {
-    background-color: #fff;
-    border-bottom-color: #fff; 
+    background-color: #FFE946;
+    border-bottom-color: #FFE946; 
   }
   
   #pnl_1, #pnl_2, #pnl_3, #pnl_4, #pnl_5 {
@@ -117,7 +117,7 @@ body{
   
   #uno:target ~ #pnl_1, #dos:target ~ #pnl_2, #tres:target ~ #pnl_3, #cuatro:target ~ #pnl_4, #cinco:target ~ #pnl_5 { 
     position: static;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(8, 8, 8);
   }
   
   #uno:target ~ #pnl_1 > div, #dos:target ~ #pnl_2 > div, #tres:target ~ #pnl_3 > div, #cuatro:target ~ #pnl_4 > div, #cinco:target ~ #pnl_5 > div{
@@ -169,7 +169,7 @@ a:link,a:active,a:visited,a:hover{
 {
 	width: 100%;
     min-height: 5vh;
-    background: white;
+    background: #FFE946;
     display: flex;
     align-items: center;
     justify-content: center;
