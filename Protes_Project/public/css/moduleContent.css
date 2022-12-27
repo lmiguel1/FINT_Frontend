@@ -135,6 +135,9 @@ body{
         display: block;
     }
 
+    .progress-container {
+      width: 1400px;
+    }
     .header_2 > p {
       margin-left: 50px;
     }
