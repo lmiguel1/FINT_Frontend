@@ -15,7 +15,7 @@
     margin-top: 5%;
 }
 .course-desc{
-    width: 80%;
+    padding: 0 10%;
     margin: auto;
 }
 .course-desc__title{
@@ -49,9 +49,11 @@
 .col-lg-4 h4{
     margin-top: 10%;
 }
-
+hr{
+    margin: 0;
+}
 .about-us{
-    width: 95%;
+    padding: 0 2.5%;
     margin: auto;
     display: flex;
 }

@@ -8,19 +8,20 @@
     <link rel="stylesheet" href="../../public/css/normalize.css">
     <link rel="stylesheet" href="../../public/css/partials.css">
     <link rel="stylesheet" href="../../public/css/home.css">
+    <link rel="icon" href="https://www.proteccion.com/contenidos/favicon-32x32.png?v=2796d2f76dab560e48c7f1c9e2741d45" type="image/png">
     <title>Home</title>
 </head>
 <body>
-    <header class="p-3 text-bg-dark">
+    <header class="navbar-header p-3 text-bg-dark">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="home.html" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="home.html" class="nav-link px-2 text-secondary">{LOGO}</a></li>
                     <li><a href="modulesList.html" class="nav-link px-2 text-white">Lista de modulos</a></li>
                 </ul>
                 <div class="text-end">
-                    <button type="button" class="btn btn-outline-light me-2">Login</button>
-                    <button type="button" class="btn btn-warning">Sign-up</button>
+                    <a href="login.html"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                    <a href="register.html"><button type="button" class="btn btn-warning">Sign-up</button></a>
                 </div>
             </div>
         </div>
@@ -39,11 +40,11 @@
                 </div>
             </div>
             <div class="course-info__img__container">
-                <img src="../../public/images/img_placeholder.jpg" alt="Image placeholder" class="course-info__img">
+                <img src="../../public/images/img_placeholder.jpg" alt="Image placeholder" class="course-info__img rounded-circle">
             </div>
         </div>
         <hr>
-        <div class="course-desc">
+        <div class="course-desc bg-white">
             <h3 class="course-desc__title">Descripción del curso</h3>
             <div class="course-desc__info__container">
                 <div class="course-desc__info__block">
@@ -90,7 +91,7 @@
             </div>
         </div>
         <hr>
-        <div class="about-us">
+        <div class="about-us bg-white">
             <div class="about-us__info">
                 <h2 class="about-us__title">About us</h2>
                 <h3 class="company-name">Protección</h3>

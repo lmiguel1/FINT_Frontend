@@ -1,14 +1,27 @@
 *{
     box-sizing: border-box;
 }
+.navbar-header{
+    background-color: #003057 !important;
+}
+.navbar-header .btn-warning{
+    background-color: #FFE946 !important;
+}
 header>div>div{
     font-size: 125%;
+}
+h1, h2, h3, h4, h5, h6{
+    color: #0033A0;
+}
+body{
+    background-color: #FFE946;
 }
 /*Footer*/
 .footer{
     margin-bottom: 0;
     padding-left: 2%;
     padding-bottom: 0 !important;
+    color: #003057;
 }
 .row{
     width: 100%;
@@ -18,5 +31,6 @@ header>div>div{
     align-items: center;
 }
 .copyright{
-    padding-left: 5%;
+    padding: 0 5%;
+    border-top: #0033A0 solid 1px !important;
 }

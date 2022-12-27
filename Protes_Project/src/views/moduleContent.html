@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../public/css/partials.css">
     <link rel="stylesheet" href="../../public/css/moduleContent.css">
     <link href='https://css.gg/facebook.css' rel='stylesheet'>
     <link href='https://css.gg/twitter.css' rel='stylesheet'>
@@ -16,27 +18,34 @@
 </head>
 <body>
 
-<header>
-
-    <h1> Pro@ctivo </h1>
-    <img src="./assets/Protección.png" alt="logo">
-    <div class="left-header">
-      <p> <strong>USUARIO </strong> </p> 
-      <i class="gg-user"></i>
-   </div>
-   
+  <header class="navbar-header p-3 text-bg-dark">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="home.html" class="nav-link px-2 text-secondary">{LOGO}</a></li>
+                <li><a href="modulesList.html" class="nav-link px-2 text-white">Lista de modulos</a></li>
+            </ul>
+            <div class="text-end">
+                <a href="login.html"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                <a href="register.html"><button type="button" class="btn btn-warning">Sign-up</button></a>
+            </div>
+        </div>
+    </div>
 </header>
 <hr>
 <main>
   <section class="header_2"> 
     
     <img src="./assets/ed.jpg" alt="education-pic" width="300px" height="180px">
-    <div class="progress">
-        <div class="progress-bar" style="width:33%;">
-            <span class="progress-bar-text">20%</span>
-            
-        </div>
-        <h1 class="title">MÓDULO I: Invertir aprendiendo, aprender invirtiendo</h1> 
+    <div class="progress-container">
+      
+      <div class="progress">
+          <div class="progress-bar" style="width:33%;">
+              <span class="progress-bar-text">20%</span>
+              
+            </div>
+          </div>
+      <h1 class="title">MÓDULO I: Invertir aprendiendo, aprender invirtiendo</h1> 
     </div>
     
    <img src="./assets/gift-purple.png" alt="">
@@ -177,18 +186,62 @@
       
 </main>
 <hr>
-<footer>
-  
-<div class="social-network">
-    
-    <i class="gg-twitter"></i> 
-    <i class="gg-instagram"></i> 
-    <i class="gg-facebook"></i>
+<footer class="footer">
+  <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="home.html" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+      </div>
 
-</div>
+      <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+      </div>
 
-   <p> &#169; 2022 Protección </p> 
+      <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+              <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+      </div>
 
+      <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                  <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+          </form>
+      </div>
+  </div>
+
+  <div class="copyright d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>&copy; 2022 Protección</p>
+      <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+      </ul>
+  </div>
 </footer>
     
 </body>
