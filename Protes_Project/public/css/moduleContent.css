@@ -14,7 +14,10 @@ header,h1 {
   font-size: 25px;
 }
 
-
+.title {
+  color: rgb(5, 15, 155);
+  text-align: center;
+}
 
 
 
