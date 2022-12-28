@@ -1,0 +1,10 @@
+.container{
+    text-align: center;
+    display: flex;
+}
+.additional-info__icons__placeholder{
+    width: 20%;
+}
+.data, .left-container{
+    padding: 2%;
+}
