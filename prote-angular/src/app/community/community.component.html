@@ -1,0 +1,19 @@
+<div class="info">
+  <h1 class="title">Porque aprendemos, invertimos y crecemos juntos</h1>
+  <h2>Este es un espacio donde podras interactuar con guías, portafolios, consejos y contenidos en general creados por la comunidad</h2>
+</div>
+<div class="questions">
+  <div *ngFor="let question of questions" class="card">
+    <div class="user">
+      <img src="{{question.pic}}" alt="Image of user" class="user__pic rounded-circle">
+      <p class="user__name">{{question.user}}</p>
+    </div>
+    <div class="question__container">
+      <h3 class="question"> {{question.question}} </h3>
+      <div class="question__info">
+        <p class="timestamp"> {{question.time}} </p>
+        <p class="responses">  Answers: {{question.responses}} </p>
+      </div>
+    </div>
+  </div>
+</div>

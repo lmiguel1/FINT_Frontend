@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { CommunityComponent } from './community/community.component';
 import { DescriptionComponent } from './content/description/description.component';
+import { ContentComponent } from './content/content/content.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { DescriptionComponent } from './content/description/description.componen
     FooterComponent,
     CommunityComponent,
     DescriptionComponent,
+    ContentComponent,
   ],
   imports: [
     BrowserModule,

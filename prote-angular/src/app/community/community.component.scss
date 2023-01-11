@@ -1,0 +1,39 @@
+.info{
+  width: 80%;
+  margin: 3rem auto;
+}
+.questions{
+  width: 90%;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-around;
+  .card{
+    width: 20%;
+    text-align: center;
+    .user{
+      margin: 5%;
+      display: flex;
+      align-items: center;
+      &__name{
+        margin: 0 auto;
+      }
+      &__pic{
+        width: 30%;
+      }
+    }
+    .question__container{
+      *{
+        margin: 0;
+      }
+      .question{
+        margin-bottom: 2rem;
+      }
+      .question__info{
+        margin: auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
