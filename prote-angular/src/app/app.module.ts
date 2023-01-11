@@ -11,7 +11,8 @@ import { HeaderComponent } from './partials/header/header.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
-import { MapComponent } from './content/map/map.component';
+import { CommunityComponent } from './community/community.component';
+import { DescriptionComponent } from './content/description/description.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MapComponent } from './content/map/map.component';
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
-    MapComponent
+    CommunityComponent,
+    DescriptionComponent,
   ],
   imports: [
     BrowserModule,
