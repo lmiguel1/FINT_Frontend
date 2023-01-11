@@ -1,0 +1,48 @@
+.content-container{
+  text-align: center;
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+.main-info{
+  text-align: center;
+  margin: 2%;
+}
+.additional-info__icons__placeholder{
+  width: 20%;
+}
+.data, .left-container{
+  padding: 2%;
+  width: 50%;
+}
+.left-img{
+  width: 80%;
+  margin: 1rem 0;
+}
+.data {
+  margin: 1rem 0;
+  &__title{
+    margin-bottom: 2rem;
+  }
+  &__fields{
+    margin: 10% auto 20%;
+    &__input{
+      width: 50%;
+      display: block;
+      margin: 5% auto;
+      font-size: 1.3rem;
+    }
+  }
+}
+.additional-info{
+  &__title{
+    margin: 5%;
+  }
+  img{
+    padding: 0 3%;
+    margin: 0 0 5%;
+  }
+  &__create{
+    margin: 10% auto;
+  }
+}
