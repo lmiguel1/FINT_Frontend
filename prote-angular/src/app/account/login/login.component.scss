@@ -46,3 +46,14 @@
     margin: 10% auto;
   }
 }
+h1, h2, h3, h4, h5, h6{
+  color: #0033A0;
+}
+.data__fields{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  &__btn{
+    margin: 2rem;
+  }
+}
