@@ -1,5 +1,11 @@
+header{
+  padding: 0.2rem !important;
+}
 .navbar-header{
   background-color: #003057 !important;
+}
+.nav{
+  align-items: center;
 }
 .navbar-header .btn-warning{
   background-color: #FFE946 !important;
@@ -9,4 +15,7 @@ header>div>div{
 }
 h1, h2, h3, h4, h5, h6{
   color: #0033A0;
+}
+.header__logo{
+  width: 70px;
 }

@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'modules', component: ListComponent, pathMatch: 'full'},
-  {path: 'modules/description', component: DescriptionComponent},
+  {path: 'modules/description/:id', component: DescriptionComponent},
   {path: 'modules/content', component: ContentComponent},
   {path: 'community', component: CommunityComponent},
 ];

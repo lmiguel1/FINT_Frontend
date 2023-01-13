@@ -27,7 +27,8 @@
                 </mat-tab-group>
               </div>
               <div class="module__right__info__progress">
-                  Completado / Total (%)
+                  <p> Completado / Total (%) </p>
+                  <mat-progress-bar mode="determinate" value="{{getPercent(modulesList[1])}}"></mat-progress-bar>
               </div>
               <a routerLink="/modules/content"><button class="module__right__info__continue btn btn-primary">Continúa donde lo dejaste</button></a>
           </div>
