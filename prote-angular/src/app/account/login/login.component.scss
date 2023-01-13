@@ -3,17 +3,28 @@
   display: flex;
   width: 90%;
   margin: auto;
+  @media(max-width: 600px){
+    display: block;
+  }
 }
 .main-info{
   text-align: center;
   margin: 2%;
 }
 .additional-info__icons__placeholder{
-  width: 20%;
+  width: 75px;
+  height: 55px;
+  @media(max-width: 900px){
+    width: 55px;
+    height: 40px;
+  }
 }
 .data, .left-container{
   padding: 2%;
   width: 50%;
+  @media(max-width: 600px){
+    width: 100%;
+  }
 }
 .left-img{
   width: 80%;
