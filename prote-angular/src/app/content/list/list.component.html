@@ -1,0 +1,21 @@
+<main>
+  <div class="course-info">
+      <img src="../../../assets/images/financial-assets.png" alt="Image placeholder" class="course-info__img rounded-circle">
+      <div class="course-info__text">
+          <h1 class="course-info__text__title"> Activos Financieros </h1>
+          <p class="course-info__text__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, natus animi temporibus molestiae voluptates unde dolorem eveniet quisquam aperiam architecto quam sapiente earum provident fuga sed sequi ducimus ad corrupti!</p>
+      </div>
+  </div>
+  <div class="modules">
+      <div *ngFor="let module of modulesList">
+        <div class="modules__module module__1">
+          <div class="modules__module__name">{{module.name}}</div>
+          <div class="modules__module__progress">{{getRatio(module)}}</div>
+          <div class="modules__module__arrow">
+              <a routerLink="/modules/description/{{module.id}}"><i class="bi bi-chevron-right"></i></a>
+          </div>
+        </div>
+          <mat-progress-bar mode="determinate" value="{{getPercent(module)}}"></mat-progress-bar>
+      </div>
+  </div>
+</main>

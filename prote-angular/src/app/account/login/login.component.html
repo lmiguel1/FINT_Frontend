@@ -1,0 +1,38 @@
+<main>
+  <p class="main-info">Accede a nuestros cursos ingresando a tu cuenta</p>
+  <div class="content-container">
+      <div class="left-container">
+          <img src="../../../assets/images/login-pic.png" alt="Image placeholder" class="left-img rounded-circle">
+      </div>
+      <div class="data">
+        <form action="">
+          <h1 class="data__title">Ingresar</h1>
+          <div class="data__fields">
+            <mat-form-field appearance="fill">
+              <mat-label>E-mail</mat-label>
+              <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Contraseña</mat-label>
+              <input matInput [type]="hide ? 'password': 'text'">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" type="button">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+            <button class="data__fields__btn btn btn-primary" type="button" routerLink="/modules">Log In</button>
+          </div>
+          <hr>
+          <div class="additional-info">
+              <h2 class="additional-info__title">O puedes usar</h2>
+              <div class="additional-info__icons">
+                  <img src="../../../assets/images/google-login.webp" alt="" class="additional-info__icons__placeholder rounded-circle">
+                  <img src="../../../assets/images/facebook-login.webp" alt="" class="additional-info__icons__placeholder rounded-circle">
+                  <img src="../../../assets/images/apple-login.png" alt="" class="additional-info__icons__placeholder">
+              </div>
+              <p class="additional-info__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, asperiores perspiciatis nobis eum non nihil nostrum expedita, accusantium quam tenetur quisquam cum facere aspernatur alias omnis officiis dolores sed corrupti.</p>
+              <h3 class="additional-info__create">Nuevo aquí? <a routerLink="/register">Crea tu cuenta</a></h3>
+          </div>
+        </form>
+      </div>
+  </div>
+</main>

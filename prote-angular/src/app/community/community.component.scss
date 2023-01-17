@@ -1,0 +1,72 @@
+h1, h2, h3, h4, h5, h6{
+  color: #0033A0;
+}
+.info{
+  width: 80%;
+  margin: 3rem auto;
+  p{
+    font-size: 120%;
+  }
+}
+.questions{
+  width: 90%;
+  margin: 3rem auto 6rem;
+  display: flex;
+  justify-content: space-around;
+  .card{
+    width: 22%;
+    text-align: center;
+    padding: 1%;
+    border: #0033A0 solid 1px;
+    box-shadow: 3px 3px rgba($color: black, $alpha: 0.5);
+    &:nth-of-type(even){
+      background: rgba($color: #0033A0, $alpha: 0.1);
+    }
+    .user{
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      &__name{
+        margin: 1rem auto;
+        padding: 0.5rem 1rem;
+        background-color: rgba($color: #0033A0, $alpha: 0.6);
+        border-radius: 10px;
+        color: white;
+      }
+      &__pic{
+        width: 30%;
+      }
+    }
+    .question__container{
+      *{
+        margin: 0;
+      }
+      .question{
+        margin-bottom: 2rem;
+      }
+      .question__info{
+        margin: auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+.events{
+  @extend .questions;
+  .card{
+    width: 30%;
+    h3{
+      margin: {
+        top: 2rem;
+        bottom: 0
+      };
+    }
+    .event__img{
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+  }
+}

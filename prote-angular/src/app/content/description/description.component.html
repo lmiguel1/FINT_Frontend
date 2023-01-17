@@ -1,0 +1,37 @@
+<main>
+  <div class="module">
+      <div class="module__left">
+          <h1 class="module__left__title">Bienvenido a "Título del módulo"</h1>
+          <p class="module__left__intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque est deserunt obcaecati corrupti animi ullam laudantium qui laborum quam debitis exercitationem iusto iste error tempora modi magni, quae voluptates at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique possimus aliquam laboriosam deleniti, ipsam non et quos ex soluta at consequatur corrupti a officia odit, laudantium, ullam eius corporis. Beatae.</p>
+          <p class="module__left__intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque est deserunt obcaecati corrupti animi ullam laudantium qui laborum quam debitis exercitationem iusto iste error tempora modi magni, quae voluptates at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique possimus aliquam laboriosam deleniti, ipsam non et quos ex soluta at consequatur corrupti a officia odit, laudantium, ullam eius corporis. Beatae.</p>
+          <hr>
+          <h2 class="module__left__to-learn">Lo que aprenderás</h2>
+          <ul>
+            <li class="module__left__to-learn__items">Items/contenidos del modulo actual</li>
+            <li class="module__left__to-learn__items">Items/contenidos del modulo actual</li>
+            <li class="module__left__to-learn__items">Items/contenidos del modulo actual</li>
+            <li class="module__left__to-learn__items">Items/contenidos del modulo actual</li>
+            <li class="module__left__to-learn__items">Items/contenidos del modulo actual</li>
+          </ul>
+      </div>
+      <div class="module__right">
+          <img src="../../../assets/images/ongoing-investments.webp" alt="Image placeholder" class="module__right__img">
+          <div class="module__right__info">
+              <div class="module__right__info__tabs__container">
+                <mat-tab-group>
+                  <mat-tab label="Home"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eligendi quam cupiditate possimus vitae inventore laboriosam nostrum? Veniam soluta iste eaque quas explicabo modi dignissimos deleniti perferendis. Vero, ullam maxime. </mat-tab>
+                  <mat-tab label="Tema 1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis sed ipsa quae ad totam beatae culpa nulla soluta quas alias! </mat-tab>
+                  <mat-tab label="Tema 2">  Soluta cupiditate amet cum placeat distinctio dolorem nemo, aut numquam? </mat-tab>
+                  <mat-tab label="Tema 3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, eaque.  </mat-tab>
+                  <mat-tab label="Tema 4"> Odit eius officiis animi harum ad hic, veritatis sint libero corrupti dolorum tenetur, autem quisquam quaerat minima temporibus nostrum alias! </mat-tab>
+                </mat-tab-group>
+              </div>
+              <div class="module__right__info__progress">
+                  <p> Completado / Total (%) </p>
+                  <mat-progress-bar mode="determinate" value="{{getPercent(modulesList[1])}}"></mat-progress-bar>
+              </div>
+              <a routerLink="/modules/content"><button class="module__right__info__continue btn btn-primary">Continúa donde lo dejaste</button></a>
+          </div>
+      </div>
+  </div>
+</main>
