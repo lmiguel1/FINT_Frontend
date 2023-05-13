@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent {
+export class ListComponent implements OnInit{
+  hasToken = false;
+
+  ngOnInit(): void {
+    //Check if 'token' exists in local storage
+    this.hasToken = !!localStorage.getItem('token');
+  }
+
+
+
+
+
   modulesList: any[] = [
     {id:"1", name: "Module 1", done: 2, total: 4},
     {id:"2", name: "Module 2", done: 6, total: 10},

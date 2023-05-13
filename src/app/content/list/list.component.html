@@ -1,5 +1,5 @@
 <main>
-  <div class="course-info">
+  <div class="course-info" *ngIf="hasToken">
       <img src="../../../assets/images/financial-assets.png" alt="Image placeholder" class="course-info__img rounded-circle">
       <div class="course-info__text">
           <h1 class="course-info__text__title"> Activos Financieros </h1>
@@ -17,5 +17,8 @@
         </div>
           <mat-progress-bar mode="determinate" value="{{getPercent(module)}}"></mat-progress-bar>
       </div>
+  </div>
+  <div *ngIf="!hasToken">
+    <h1>You are not logged.</h1>
   </div>
 </main>
