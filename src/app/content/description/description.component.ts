@@ -1,7 +1,8 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../content.service';
 import { Module } from '../module';
 import { Subject } from '../subject';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -13,12 +14,24 @@ export class DescriptionComponent implements OnInit{
 
   modules!: Module[];
   subjects!: Subject[];
-  constructor(private contentService: ContentService){}
+  moduleTitle!: string;
+  constructor(
+    private contentService: ContentService, 
+    private route: ActivatedRoute
+    ){}
 
   ngOnInit(): void {
     this.contentService.getAllModules().subscribe(
       res => {
         this.modules = res;
+        const moduleId = Number(this.route.snapshot.paramMap.get('id'));
+        //Find the corresponding module in modules' array
+        const thisModule = this.modules.find(m => m.id === moduleId);
+        if(thisModule){
+          this.moduleTitle = thisModule.title;
+        } else {
+          this.moduleTitle = 'Unknown Module';
+        }
       }
     )
     this.contentService.getAllSubjects().subscribe(
