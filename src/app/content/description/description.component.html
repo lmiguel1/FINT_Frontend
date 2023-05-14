@@ -7,11 +7,7 @@
           <hr>
           <h2 class="module__left__to-learn">Lo que aprenderás</h2>
           <ul>
-            <li class="module__left__to-learn__items">Items/contenidos del modulo actual</li>
-            <li class="module__left__to-learn__items">Items/contenidos del modulo actual</li>
-            <li class="module__left__to-learn__items">Items/contenidos del modulo actual</li>
-            <li class="module__left__to-learn__items">Items/contenidos del modulo actual</li>
-            <li class="module__left__to-learn__items">Items/contenidos del modulo actual</li>
+            <li class="module__left__to-learn__items" *ngFor="let subject of subjects" > {{subject.title}} </li>
           </ul>
       </div>
       <div class="module__right">
@@ -26,10 +22,10 @@
                   <mat-tab label="Tema 4"> Odit eius officiis animi harum ad hic, veritatis sint libero corrupti dolorum tenetur, autem quisquam quaerat minima temporibus nostrum alias! </mat-tab>
                 </mat-tab-group>
               </div>
-              <div class="module__right__info__progress">
+<!--               <div class="module__right__info__progress">
                   <p> Completado / Total (%) </p>
-                  <mat-progress-bar mode="determinate" value="{{getPercent(modulesList[1])}}"></mat-progress-bar>
-              </div>
+                  <mat-progress-bar mode="determinate" value="{{getPercent(modules[1])}}"></mat-progress-bar>
+              </div> -->
               <a routerLink="/modules/content"><button class="module__right__info__continue btn btn-primary">Continúa donde lo dejaste</button></a>
           </div>
       </div>

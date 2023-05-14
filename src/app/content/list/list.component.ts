@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from '../content.service';
+import { Module } from '../module';
 
 @Component({
   selector: 'app-list',
@@ -7,25 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit{
   hasToken = false;
+  modules!: Module[];
+
+  constructor(private contentService: ContentService){}
 
   ngOnInit(): void {
     //Check if 'token' exists in local storage
     this.hasToken = !!localStorage.getItem('token');
+
+    //Retreive modules' data
+    this.contentService.getAllModules().subscribe(
+      
+      res => {
+        this.modules = res;
+      }
+    )
   }
 
-
-
-
-
-  modulesList: any[] = [
-    {id:"1", name: "Module 1", done: 2, total: 4},
-    {id:"2", name: "Module 2", done: 6, total: 10},
-    {id:"3", name: "Module 3", done: 2, total: 9},
-    {id:"4", name: "Module 4", done: 0, total: 5},
-    {id:"5", name: "Module 5", done: 0, total: 4},
-    {id:"6", name: "Module 6", done: 0, total: 8},
-    {id:"7", name: "Module 7", done: 0, total: 7},
-  ]
   getPercent(item: any) :number{
     const result = (item.done / item.total)*100;
     return Number(result.toFixed(2));
