@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Credential } from '../credential';
 import { UserService } from '../user.service';
 import { User } from '../user';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,7 @@ export class LoginComponent implements OnInit{
 
   user!: User[];
 
-  constructor(private userService: UserService){}
+  constructor(private userService: UserService, private router: Router){}
 
   ngOnInit(): void {
     this.userService.getAll().subscribe(
@@ -32,9 +34,10 @@ export class LoginComponent implements OnInit{
     }
     this.userService.signIn(user).subscribe(
       res => {
+        localStorage.setItem('email', this.email);
         console.log(this.userService.getToken());
-        
+        this.router.navigate(['/']);
       }
-    )
+    );
   }
 }

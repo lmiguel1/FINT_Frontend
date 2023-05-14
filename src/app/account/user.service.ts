@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { map, Observable, Subject } from 'rxjs';
 import { User } from './user';
 import { Credential } from './credential';
 import { UserDto } from './user-dto';
@@ -10,7 +10,8 @@ import { UserDto } from './user-dto';
 })
 export class UserService {
 
-  private apiUrl:string = 'http://localhost:8080/test/users'
+  private loginSubject = new Subject<void>();
+  private apiUrl:string = 'http://localhost:8080/users'
 
   constructor(private http: HttpClient) { }
 
@@ -40,12 +41,16 @@ export class UserService {
           token = bearerToken?.replace('Bearer ', "");
           localStorage.setItem("token", token);
         }
-        
+        this.loginSubject.next();
         return body;
       }))
+  }
+  getLoginSubject(){
+    return this.loginSubject.asObservable();
   }
 
   getToken(){
     return localStorage.getItem('token');
   }
+
 }
