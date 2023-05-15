@@ -17,6 +17,7 @@ import { DescriptionComponent } from './content/description/description.componen
 import { ContentComponent } from './content/content/content.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './account/helpers/auth.interceptor';
+import { AccountComponent } from './account/account/account.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AuthInterceptor } from './account/helpers/auth.interceptor';
     CommunityComponent,
     DescriptionComponent,
     ContentComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,

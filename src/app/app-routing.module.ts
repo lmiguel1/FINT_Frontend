@@ -8,6 +8,8 @@ import { DescriptionComponent } from './content/description/description.componen
 import { ContentComponent } from './content/content/content.component';
 import { CommunityComponent } from './community/community.component';
 import { AuthGuard } from './auth-guard';
+import { AccountComponent } from './account/account/account.component';
+
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -17,6 +19,7 @@ const routes: Routes = [
   {path: 'modules/description/:id', component: DescriptionComponent, canActivate: [AuthGuard]},
   {path: 'modules/content', component: ContentComponent, canActivate: [AuthGuard]},
   {path: 'community', component: CommunityComponent, canActivate: [AuthGuard]},
+  {path: 'account', component: AccountComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

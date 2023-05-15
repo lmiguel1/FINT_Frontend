@@ -4,16 +4,17 @@ import { map, Observable, Subject } from 'rxjs';
 import { User } from './user';
 import { Credential } from './credential';
 import { UserDto } from './user-dto';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private loginSubject = new Subject<void>();
+  public loginSubject = new Subject<void>();
   private apiUrl:string = 'http://localhost:8080/test/users'
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   getAll(): Observable<User[]> {
     return this.http.get<User[]>(this.apiUrl);
@@ -21,6 +22,10 @@ export class UserService {
 
   checkEmail(email:string):Observable<boolean>{
     return this.http.get<boolean>(`${this.apiUrl}/checkEmail/${email}`)
+  }
+  
+  userByEmail(email: string): Observable<User>{
+    return this.http.post<User>(`${this.apiUrl}/userByEmail`, email);
   }
 
 
@@ -53,4 +58,10 @@ export class UserService {
     return localStorage.getItem('token');
   }
 
+  signOut(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('email');
+    this.loginSubject.next(); //Notify subscribed observers.
+    this.router.navigate(['/']).then(() => window.location.reload());
+  }
 }
