@@ -11,7 +11,7 @@ import { UserDto } from './user-dto';
 export class UserService {
 
   private loginSubject = new Subject<void>();
-  private apiUrl:string = 'http://localhost:8080/users'
+  private apiUrl:string = 'http://localhost:8080/test/users'
 
   constructor(private http: HttpClient) { }
 
