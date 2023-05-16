@@ -15,6 +15,7 @@ export class DescriptionComponent implements OnInit{
   modules!: Module[];
   subjects!: Subject[];
   moduleTitle!: string;
+  
   constructor(
     private contentService: ContentService, 
     private route: ActivatedRoute
@@ -36,8 +37,6 @@ export class DescriptionComponent implements OnInit{
     )
     this.contentService.getAllSubjects().subscribe(
       res => {
-        console.log(res);
-        
         this.subjects = res;
       }
     )

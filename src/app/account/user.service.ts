@@ -27,12 +27,12 @@ export class UserService {
   userByEmail(email: string): Observable<User>{
     return this.http.post<User>(`${this.apiUrl}/userByEmail`, email);
   }
-
-
   create(user: UserDto): Observable<User>{
     return this.http.post<User>(this.apiUrl, user);
   }
-
+  update(user: UserDto, id: number): Observable<User>{
+    return this.http.put<User>(`${this.apiUrl}/${id}`, user);
+  }
 
   signIn(credential:Credential){
     return this.http.post("http://localhost:8080/login", credential, {

@@ -35,5 +35,6 @@ export class ContentService {
   createContent(content: ContentDto): Observable<Content>{
     return this.http.post<Content>(`${this.apiUrl}/content`, content);
   }
+  //TODO: Multimedia - Pending on Back
 
 }

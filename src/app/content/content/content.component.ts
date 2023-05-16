@@ -1,20 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Module } from '../module';
+import { Subject } from '../subject';
+import { ContentService } from '../content.service';
+import { Content } from '../content';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
-export class ContentComponent {
-  modulesList: any[] = [
-    {name: "Module 1", done: 3, total: 4},
-    {name: "Module 2", done: 6, total: 10},
-    {name: "Module 3", done: 2, total: 9},
-    {name: "Module 4", done: 0, total: 5},
-    {name: "Module 5", done: 0, total: 4},
-    {name: "Module 6", done: 0, total: 8},
-    {name: "Module 7", done: 0, total: 7},
-  ]
+export class ContentComponent implements OnInit{
+  modulesList!: Module[];
+  subjects!: Subject[];
+  contents!: Content[];
+
+  constructor(private contentService: ContentService){}
+
+  ngOnInit(): void {
+    this.contentService.getAllSubjects().subscribe(
+      res => {
+        this.subjects = res;
+      }
+    );
+    this.contentService.getAllContent().subscribe(
+      res => {
+        this.contents = res;
+      }
+    )
+  }
+
   getPercent(item: any) :number{
     const result = (item.done / item.total)*100;
     return Number(result.toFixed(2));

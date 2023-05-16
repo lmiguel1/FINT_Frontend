@@ -12,44 +12,34 @@
               <p>Nombre: </p>
               <mat-form-field appearance="fill">
                 <mat-label> {{thisUser.name}} </mat-label>
-                <input matInput name="userName" >
+                <input matInput name="userName" [(ngModel)]="userName">
               </mat-form-field>
             </div>
             <div class="data__fields__pair" id="userEmail-container">
               <p>E-mail: </p>
               <mat-form-field appearance="fill">
                 <mat-label> {{thisUser.email}} </mat-label>
-                <input matInput name="userEmail" >
+                <input matInput name="userEmail" disabled>
               </mat-form-field>
             </div>
             <div class="data__fields__pair" id="userPass-container">
               <p>Contraseña: </p>
               <mat-form-field appearance="fill">
                 <mat-label> ********* </mat-label>
-                <input matInput name="userPass" >
+                <input matInput name="userPass" type="password" [(ngModel)]="userPass" >
               </mat-form-field>
             </div>
             <div class="data__fields__pair" id="userRePass-container">
               <p>Repetir nueva Contraseña: </p>
               <mat-form-field appearance="fill">
                 <mat-label> ********* </mat-label>
-                <input matInput name="userRePass" >
+                <input matInput type="password" name="userRePass" >
               </mat-form-field>
             </div>
-            <button class="data__fields__btn btn btn-primary" type="button" >Actualizar mis datos</button>
+            <button class="data__fields__btn btn btn-primary" type="button" (click)="updateUser()" >Actualizar mis datos</button>
             <button class="data__fields__btn btn btn-primary" type="button" (click)="logOut()" routerLink="/">Cerrar Sesión</button>
           </div>
           <hr>
-          <div class="additional-info">
-              <h2 class="additional-info__title">O puedes usar</h2>
-              <div class="additional-info__icons">
-                  <img src="../../../assets/images/google-login.webp" alt="" class="additional-info__icons__placeholder rounded-circle">
-                  <img src="../../../assets/images/facebook-login.webp" alt="" class="additional-info__icons__placeholder rounded-circle">
-                  <img src="../../../assets/images/apple-login.png" alt="" class="additional-info__icons__placeholder">
-              </div>
-              <p class="additional-info__p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, asperiores perspiciatis nobis eum non nihil nostrum expedita, accusantium quam tenetur quisquam cum facere aspernatur alias omnis officiis dolores sed corrupti.</p>
-              <h3 class="additional-info__create">Nuevo aquí? <a routerLink="/register">Crea tu cuenta</a></h3>
-          </div>
         </form>
       </div>
   </div>

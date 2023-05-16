@@ -50,10 +50,6 @@ export class RegisterComponent implements OnInit {
     this.userService.create(user).subscribe(
       res => {
         console.log("Usuario creado satisfactoriamente", res);
-      },
-      error => {
-        console.log(error);
-        
       }
     )
   }

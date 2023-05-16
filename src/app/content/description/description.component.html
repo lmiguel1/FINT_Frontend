@@ -15,11 +15,7 @@
           <div class="module__right__info">
               <div class="module__right__info__tabs__container">
                 <mat-tab-group>
-                  <mat-tab label="Home"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eligendi quam cupiditate possimus vitae inventore laboriosam nostrum? Veniam soluta iste eaque quas explicabo modi dignissimos deleniti perferendis. Vero, ullam maxime. </mat-tab>
-                  <mat-tab label="Tema 1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis sed ipsa quae ad totam beatae culpa nulla soluta quas alias! </mat-tab>
-                  <mat-tab label="Tema 2">  Soluta cupiditate amet cum placeat distinctio dolorem nemo, aut numquam? </mat-tab>
-                  <mat-tab label="Tema 3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, eaque.  </mat-tab>
-                  <mat-tab label="Tema 4"> Odit eius officiis animi harum ad hic, veritatis sint libero corrupti dolorum tenetur, autem quisquam quaerat minima temporibus nostrum alias! </mat-tab>
+                  <mat-tab *ngFor="let subject of subjects" label={{subject.title}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eligendi quam cupiditate possimus vitae inventore laboriosam nostrum? Veniam soluta iste eaque quas explicabo modi dignissimos deleniti perferendis. Vero, ullam maxime.</mat-tab>
                 </mat-tab-group>
               </div>
 <!--               <div class="module__right__info__progress">
