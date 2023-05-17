@@ -22,6 +22,7 @@ import { AccountComponent } from './account/account/account.component';
 //External
 import { NgxPayPalModule } from 'ngx-paypal';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { PaypalComponent } from './paypal/paypal.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     DescriptionComponent,
     ContentComponent,
     AccountComponent,
+    PaypalComponent,
   ],
   imports: [
     BrowserModule,
