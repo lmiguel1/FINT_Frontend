@@ -18,11 +18,12 @@ import { ContentComponent } from './content/content/content.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './account/helpers/auth.interceptor';
 import { AccountComponent } from './account/account/account.component';
+import { PaypalComponent } from './paypal/paypal.component';
 
 //External
 import { NgxPayPalModule } from 'ngx-paypal';
 import { NgxSpinnerModule } from "ngx-spinner";
-import { PaypalComponent } from './paypal/paypal.component';
+
 
 @NgModule({
   declarations: [
