@@ -72,12 +72,25 @@ mat-progress-bar{
     margin-left: 5%;
   }
 }
-.bi-pencil{
-  margin-right: 20px;
-}
-.bi-trash3{
-  cursor: pointer;
-  margin-right: 100px;
-  color: white !important;
-  text-shadow: black 2px 2px;
+.module__left{
+  width: 90%;
+  margin: auto;
+  &__title{
+    margin-top: 2%;
+  }
+  &__form-container{
+    width: 80%;
+    margin: auto;
+    span{
+      width: 15%;
+      background-color: #1D428A;
+      color: #fff;
+    }
+  }
+  &__form{
+    margin: 5% 0;
+    div{
+      margin: 2% 0;
+    }
+  }
 }

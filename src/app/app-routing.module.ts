@@ -9,6 +9,8 @@ import { ContentComponent } from './content/content/content.component';
 import { CommunityComponent } from './community/community.component';
 import { AuthGuard } from './auth-guard';
 import { AccountComponent } from './account/account/account.component';
+import { AdminPortalComponent } from './content/admin-portal/admin-portal.component';
+import { AdminGuard } from './admin.guard';
 
 
 const routes: Routes = [
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path: 'modules/description/:id', component: DescriptionComponent, canActivate: [AuthGuard]},
   {path: 'modules/content', component: ContentComponent, canActivate: [AuthGuard]},
   {path: 'community', component: CommunityComponent, canActivate: [AuthGuard]},
-  {path: 'account', component: AccountComponent, canActivate: [AuthGuard]}
+  {path: 'account', component: AccountComponent, canActivate: [AuthGuard]},
+  {path: 'modules/admin', component: AdminPortalComponent, canActivate: [AdminGuard]},
+  {path: 'modules/admin/:id', component: AdminPortalComponent, canActivate: [AdminGuard]}
 ];
 
 @NgModule({

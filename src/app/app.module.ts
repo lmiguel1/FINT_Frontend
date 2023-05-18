@@ -18,6 +18,7 @@ import { ContentComponent } from './content/content/content.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './account/helpers/auth.interceptor';
 import { AccountComponent } from './account/account/account.component';
+import { AdminPortalComponent } from './content/admin-portal/admin-portal.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AccountComponent } from './account/account/account.component';
     DescriptionComponent,
     ContentComponent,
     AccountComponent,
+    AdminPortalComponent,
   ],
   imports: [
     BrowserModule,

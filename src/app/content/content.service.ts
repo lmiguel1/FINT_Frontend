@@ -23,6 +23,12 @@ export class ContentService {
   createModule(module: ModuleDto): Observable<Module>{
     return this.http.post<Module>(`${this.apiUrl}/modules`, module);
   }
+  updateModule(module: ModuleDto, id: number): Observable<Module>{
+    return this.http.put<Module>(`${this.apiUrl}/modules/${id}`, module);
+  }
+  deleteModule(id: number): Observable<void>{
+    return this.http.delete<void>(`${this.apiUrl}/modules/${id}`);
+  }
   getAllSubjects(): Observable<Subject[]> {
     return this.http.get<Subject[]>(`${this.apiUrl}/subjects`);
   }
