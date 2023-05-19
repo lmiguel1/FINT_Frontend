@@ -9,6 +9,7 @@ import { ContentComponent } from './content/content/content.component';
 import { CommunityComponent } from './community/community.component';
 import { AuthGuard } from './auth-guard';
 import { AccountComponent } from './account/account/account.component';
+import { PaypalComponent } from './paypal/paypal.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'modules/description/:id', component: DescriptionComponent, canActivate: [AuthGuard]},
   {path: 'modules/content', component: ContentComponent, canActivate: [AuthGuard]},
   {path: 'community', component: CommunityComponent, canActivate: [AuthGuard]},
-  {path: 'account', component: AccountComponent, canActivate: [AuthGuard]}
+  {path: 'account', component: AccountComponent, canActivate: [AuthGuard]},
+  {path: 'paypal', component: PaypalComponent}
 ];
 
 @NgModule({
