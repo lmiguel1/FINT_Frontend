@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 
 @Component({
@@ -8,6 +9,9 @@ import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 })
 export class PaypalComponent implements OnInit{
   public payPalConfig ? : IPayPalConfig;
+
+  constructor(private router: Router){}
+
 
     ngOnInit(): void {
         this.initConfig();
@@ -53,6 +57,7 @@ export class PaypalComponent implements OnInit{
               actions.order.get().then((details: any) => {
                   console.log('onApprove - you can get full order details inside onApprove: ', details);
               });
+              this.router.navigate(['/login']);
 
           },
           onClientAuthorization: (data) => {
