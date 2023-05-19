@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'modules/admin', component: AdminPortalComponent, canActivate: [AdminGuard]},
   {path: 'modules/admin/:id', component: AdminPortalComponent, canActivate: [AdminGuard]},
   {path: 'paypal', component: PaypalComponent},
-  {path: 'user/list/:id', component: AdminUserComponent, canActivate: [AdminGuard]}
+  {path: 'user/list', component: AdminUserComponent, canActivate: [AdminGuard]}
 ];
 
 @NgModule({

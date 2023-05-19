@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row table-container">
       <div class="col-md-9">
         <div class="card">
           <div class="card-header">
@@ -30,7 +30,7 @@
                     </a>
                   </td>
                   <td>
-                    <a routerLink="/users/delete/{{user.id}}" class="btn btn-dark">
+                    <a routerLink="/users/delete/{{user.id}}" class="btn btn-dark" (click)="confirmDelete(user.id)" >
                       <i class="fas fa-angle-double-right"></i> Eliminar
                     </a>
                   </td>
