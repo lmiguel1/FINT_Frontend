@@ -1,0 +1,46 @@
+<main>
+  <h1 class="main-info">Bienvenid@</h1>
+  <div class="content-container">
+      <div class="left-container">
+          <img src="../../../assets/images/login-pic.png" alt="Image placeholder" class="left-img rounded-circle">
+      </div>
+      <div class="data">
+        <form action="">
+          <h1 class="data__title">{{thisUser.name}}</h1>
+          <div class="data__fields">
+            <div class="data__fields__pair" id="userName-container">
+              <p>Nombre: </p>
+              <mat-form-field appearance="fill">
+                <mat-label> {{thisUser.name}} </mat-label>
+                <input matInput name="userName" [(ngModel)]="userName">
+              </mat-form-field>
+            </div>
+            <div class="data__fields__pair" id="userEmail-container">
+              <p>E-mail: </p>
+              <mat-form-field appearance="fill">
+                <mat-label> {{thisUser.email}} </mat-label>
+                <input matInput name="userEmail" disabled>
+              </mat-form-field>
+            </div>
+            <div class="data__fields__pair" id="userPass-container">
+              <p>Contraseña: </p>
+              <mat-form-field appearance="fill">
+                <mat-label> ********* </mat-label>
+                <input matInput name="userPass" type="password" [(ngModel)]="userPass" >
+              </mat-form-field>
+            </div>
+            <div class="data__fields__pair" id="userRePass-container">
+              <p>Repetir nueva Contraseña: </p>
+              <mat-form-field appearance="fill">
+                <mat-label> ********* </mat-label>
+                <input matInput type="password" name="userRePass" >
+              </mat-form-field>
+            </div>
+            <button class="data__fields__btn btn btn-primary" type="button" (click)="updateUser()" >Actualizar mis datos</button>
+            <button class="data__fields__btn btn btn-primary" type="button" (click)="logOut()" routerLink="/">Cerrar Sesión</button>
+          </div>
+          <hr>
+        </form>
+      </div>
+  </div>
+</main>

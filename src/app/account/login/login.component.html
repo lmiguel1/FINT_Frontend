@@ -10,16 +10,16 @@
           <div class="data__fields">
             <mat-form-field appearance="fill">
               <mat-label>E-mail</mat-label>
-              <input matInput>
+              <input matInput name="email" [(ngModel)]="email">
             </mat-form-field>
             <mat-form-field appearance="fill">
               <mat-label>Contraseña</mat-label>
-              <input matInput [type]="hide ? 'password': 'text'">
+              <input matInput [type]="hide ? 'password': 'text'" name="password" [(ngModel)]="password">
               <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" type="button">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button>
             </mat-form-field>
-            <button class="data__fields__btn btn btn-primary" type="button" routerLink="/modules">Log In</button>
+            <button class="data__fields__btn btn btn-primary" type="button" (click)="login()" >Log In</button>
           </div>
           <hr>
           <div class="additional-info">

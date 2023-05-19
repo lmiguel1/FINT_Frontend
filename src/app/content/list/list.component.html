@@ -1,21 +1,31 @@
 <main>
-  <div class="course-info">
+  <div class="course-info" *ngIf="hasToken">
       <img src="../../../assets/images/financial-assets.png" alt="Image placeholder" class="course-info__img rounded-circle">
       <div class="course-info__text">
-          <h1 class="course-info__text__title"> Activos Financieros </h1>
+          <h1 class="course-info__text__title"> Bienvenido al curso </h1>
           <p class="course-info__text__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, natus animi temporibus molestiae voluptates unde dolorem eveniet quisquam aperiam architecto quam sapiente earum provident fuga sed sequi ducimus ad corrupti!</p>
       </div>
-  </div>
+    </div>
+    <div *ngIf="isAdmin" class="admin-panel">
+      <h3>Portal Administrador: </h3>
+      <div class="btn-group admin-panel__option">
+        <a routerLink="/modules/admin" class="btn btn-primary active " aria-current="page">Añadir Modulo</a>
+      </div>
+    </div>
   <div class="modules">
-      <div *ngFor="let module of modulesList">
+      <div *ngFor="let module of modules">
         <div class="modules__module module__1">
-          <div class="modules__module__name">{{module.name}}</div>
-          <div class="modules__module__progress">{{getRatio(module)}}</div>
+          <div class="modules__module__name">{{module.title}}</div>
+          <div class="modules__module__trash">
+              <a (click)="confirmRemoval(module.id)"><i class="bi bi-trash3"></i></a>
+          </div>
+          <div class="modules__module__pencil">
+              <a routerLink="/modules/admin/{{module.id}}"><i class="bi bi-pencil"></i></a>
+          </div>
           <div class="modules__module__arrow">
               <a routerLink="/modules/description/{{module.id}}"><i class="bi bi-chevron-right"></i></a>
           </div>
         </div>
-          <mat-progress-bar mode="determinate" value="{{getPercent(module)}}"></mat-progress-bar>
       </div>
   </div>
 </main>
