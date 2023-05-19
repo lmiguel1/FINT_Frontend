@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -19,6 +19,12 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './account/helpers/auth.interceptor';
 import { AccountComponent } from './account/account/account.component';
 import { AdminPortalComponent } from './content/admin-portal/admin-portal.component';
+import { PaypalComponent } from './paypal/paypal.component';
+
+//External
+import { NgxPayPalModule } from 'ngx-paypal';
+import { NgxSpinnerModule } from "ngx-spinner";
+
 
 @NgModule({
   declarations: [
@@ -34,9 +40,12 @@ import { AdminPortalComponent } from './content/admin-portal/admin-portal.compon
     ContentComponent,
     AccountComponent,
     AdminPortalComponent,
+    PaypalComponent,
   ],
   imports: [
     BrowserModule,
+    NgxPayPalModule,
+    NgxSpinnerModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
@@ -49,6 +58,7 @@ import { AdminPortalComponent } from './content/admin-portal/admin-portal.compon
       provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true
     }
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

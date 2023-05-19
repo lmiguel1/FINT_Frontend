@@ -11,6 +11,7 @@ import { AuthGuard } from './auth-guard';
 import { AccountComponent } from './account/account/account.component';
 import { AdminPortalComponent } from './content/admin-portal/admin-portal.component';
 import { AdminGuard } from './admin.guard';
+import { PaypalComponent } from './paypal/paypal.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: 'community', component: CommunityComponent, canActivate: [AuthGuard]},
   {path: 'account', component: AccountComponent, canActivate: [AuthGuard]},
   {path: 'modules/admin', component: AdminPortalComponent, canActivate: [AdminGuard]},
-  {path: 'modules/admin/:id', component: AdminPortalComponent, canActivate: [AdminGuard]}
+  {path: 'modules/admin/:id', component: AdminPortalComponent, canActivate: [AdminGuard]},
+  {path: 'paypal', component: PaypalComponent}
 ];
 
 @NgModule({
