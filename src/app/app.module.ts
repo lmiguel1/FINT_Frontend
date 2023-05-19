@@ -24,6 +24,7 @@ import { PaypalComponent } from './paypal/paypal.component';
 //External
 import { NgxPayPalModule } from 'ngx-paypal';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { AdminUserComponent } from './account/admin-user/admin-user.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     AccountComponent,
     AdminPortalComponent,
     PaypalComponent,
+    AdminUserComponent,
   ],
   imports: [
     BrowserModule,
