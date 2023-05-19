@@ -64,4 +64,22 @@ export class UserService {
     this.loginSubject.next(); //Notify subscribed observers.
     this.router.navigate(['/']).then(() => window.location.reload());
   }
+  isAdmin(): Observable<boolean>{
+    return new Observable<boolean>(observer => {
+      const email = localStorage.getItem('email');
+      if(email){
+        this.userByEmail(email).subscribe(
+          res => {
+            const isAdmin = res.role === 'admin';
+            console.log(isAdmin);
+            observer.next(isAdmin);
+            observer.complete();
+          }
+        );
+      } else {
+        observer.next(false);
+        observer.complete();
+      }
+    });
+  }
 }
