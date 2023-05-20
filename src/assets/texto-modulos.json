@@ -1,0 +1,39 @@
+{
+  "modules": [
+    {
+      "id": 1,
+      "title": "Introducción al presupuesto",
+      "text": "Este módulo te proporcionará los conceptos básicos sobre presupuesto personal. Aprenderás a identificar tus ingresos y gastos, establecer prioridades financieras y crear un presupuesto que se ajuste a tus necesidades y metas."
+    },
+    {
+      "id": 2,
+      "title": "Cómo hacer un presupuesto",
+      "text": "En este módulo, profundizarás en el proceso de creación de un presupuesto efectivo. Te enseñaremos técnicas para hacer un seguimiento de tus gastos, identificar áreas de mejora, establecer límites y ajustar tu presupuesto según sea necesario."
+    },
+    {
+      "id": 3,
+      "title": "Ahorro e inversión",
+      "text": "Descubre la importancia del ahorro y la inversión en tu bienestar financiero a largo plazo. Aprenderás estrategias para ahorrar dinero de manera efectiva, evaluar las opciones de inversión disponibles y tomar decisiones informadas para hacer crecer tu patrimonio."
+    },
+    {
+      "id": 4,
+      "title": "Tipos de inversiones",
+      "text": "En este módulo, explorarás los diferentes tipos de inversiones, desde acciones y bonos hasta bienes raíces y fondos de inversión. Conocerás los riesgos y rendimientos asociados con cada opción, lo que te ayudará a diversificar tu cartera de inversiones de manera inteligente."
+    },
+    {
+      "id": 5,
+      "title": "Gestión de deudas",
+      "text": "Aprende estrategias efectivas para gestionar y reducir tus deudas. Obtendrás información sobre cómo priorizar los pagos, negociar con acreedores y utilizar herramientas como la consolidación de deudas para aliviar la carga financiera y avanzar hacia la libertad económica."
+    },
+    {
+      "id": 6,
+      "title": "Crédito y préstamos",
+      "text": "Este módulo te brindará conocimientos sobre cómo utilizar el crédito de manera responsable y comprender los diferentes tipos de préstamos disponibles. Aprenderás a evaluar las tasas de interés, los plazos de pago y los términos del contrato para tomar decisiones financieras informadas y evitar caer en deudas innecesarias."
+    },
+    {
+      "id": 7,
+      "title": "Planificación financiera a largo plazo",
+      "text": "En este módulo final, exploraremos la importancia de la planificación financiera a largo plazo. Te proporcionaremos herramientas y estrategias para planificar tu jubilación, proteger tu patrimonio y establecer un legado financiero para las generaciones futuras."
+    }
+  ]
+}

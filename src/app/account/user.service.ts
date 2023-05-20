@@ -33,6 +33,9 @@ export class UserService {
   update(user: UserDto, id: number): Observable<User>{
     return this.http.put<User>(`${this.apiUrl}/${id}`, user);
   }
+  delete(id: number): Observable<number>{
+    return this.http.delete<number>(`${this.apiUrl}/${id}`);
+  }
 
   signIn(credential:Credential){
     return this.http.post("http://localhost:8080/login", credential, {

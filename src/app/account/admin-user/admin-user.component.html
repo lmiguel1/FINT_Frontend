@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row table-container">
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-header">
+            <h4>Lista de usuarios</h4>
+          </div>
+          <div>
+            <table class="table table-stryped table-hover">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Rol</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of users">
+                  <td>{{ user.id }}</td>
+                  <td>{{ user.name}}</td>
+                 <!--  <td>{{ user.}}</td> -->
+                  <td>{{ user.email }}</td>
+                  <td>{{ user.role}}</td>
+                  <td>
+                    <a routerLink="/users/edit/{{user.id}}" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Editar
+                    </a>
+                  </td>
+                  <td>
+                    <a routerLink="/users/delete/{{user.id}}" class="btn btn-dark" (click)="confirmDelete(user.id)" >
+                      <i class="fas fa-angle-double-right"></i> Eliminar
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+         <!--  <div class="text-center p-2" *ngIf="!usuarios || usuarios.length === 0">
+            <span>Lista vacía</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -3,6 +3,7 @@
   <div class="content-container">
       <div class="left-container">
           <img src="../../../assets/images/login-pic.png" alt="Image placeholder" class="left-img rounded-circle">
+          <button class="data__fields__btn btn btn-primary adm-btn" id="admin-user-btn" type="button" routerLink="/user/list">Gestionar Usuarios <i class="bi bi-person-lock"></i></button>
       </div>
       <div class="data">
         <form action="">
@@ -37,7 +38,8 @@
               </mat-form-field>
             </div>
             <button class="data__fields__btn btn btn-primary" type="button" (click)="updateUser()" >Actualizar mis datos</button>
-            <button class="data__fields__btn btn btn-primary" type="button" (click)="logOut()" routerLink="/">Cerrar Sesión</button>
+            <button class="data__fields__btn btn btn-primary" type="button" routerLink="/paypal">Gestionar suscripción</button>
+            <button class="data__fields__btn btn btn-primary" type="button" (click)="logOut()" routerLink="/" id="logout-btn">Cerrar Sesión</button>
           </div>
           <hr>
         </form>
