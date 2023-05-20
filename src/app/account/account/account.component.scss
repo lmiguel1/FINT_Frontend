@@ -88,3 +88,14 @@ h1, h2, h3, h4, h5, h6{
 #logout-btn{
   background-color: #000;
 }
+#admin-user-btn{
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 200%;
+  background-color: rgb(255, 233, 70);
+  color: #0033A0;
+  &:hover{
+    background-color: rgb(230, 194, 50) !important;
+    border: none;
+  }
+}

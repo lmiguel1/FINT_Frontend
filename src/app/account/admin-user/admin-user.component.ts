@@ -21,6 +21,17 @@ export class AdminUserComponent implements OnInit {
       )
      
   }
+  confirmDelete(id:number){
+    const confirmDelete = window.confirm("Esta seguro que desea eliminar este usuario? Esta acción es irreversible");
+    if(confirmDelete){
+      this.userService.delete(id).subscribe(
+        res => {
+          console.log(`Usuario: ${id} borrado con exito.` );
+          window.location.reload();
+        }
+      )
+    }
 
+  }
 
 }
