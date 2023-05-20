@@ -12,7 +12,7 @@ import { AccountComponent } from './account/account/account.component';
 import { AdminPortalComponent } from './content/admin-portal/admin-portal.component';
 import { AdminGuard } from './admin.guard';
 import { PaypalComponent } from './paypal/paypal.component';
-
+import { AdminUserComponent } from './account/admin-user/admin-user.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -25,7 +25,8 @@ const routes: Routes = [
   {path: 'account', component: AccountComponent, canActivate: [AuthGuard]},
   {path: 'modules/admin', component: AdminPortalComponent, canActivate: [AdminGuard]},
   {path: 'modules/admin/:id', component: AdminPortalComponent, canActivate: [AdminGuard]},
-  {path: 'paypal', component: PaypalComponent}
+  {path: 'paypal', component: PaypalComponent},
+  {path: 'user/list/:id', component: AdminUserComponent, canActivate: [AdminGuard]}
 ];
 
 @NgModule({
